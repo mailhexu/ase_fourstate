@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ase_fourstate"
+version = "0.1.0"
+description = "ASE workflow for computing magnetic exchange coupling J using the 4-state method"
+requires-python = ">=3.8"
+dependencies = [
+    "ase",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ase_fourstate*"]
