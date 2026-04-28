@@ -263,37 +263,13 @@ calc.wannier_calculation(atoms, wannier_input)
 
 ---
 
-## Examples
-
-### CrI3 with Abinit
+## Tutorial: CrI3 with Abinit
 
 ```bash
 python examples/run_cri3_abinit.py cri3_3x3.cif --cutoff 3 --ecut 1200 --dryrun
 ```
 
-### NiI2 with Abinit
-
-```bash
-python examples/run_nii2_abinit.py --cutoff 3 --kpts 4 4 1
-```
-
-### MnCl2 with Abinit (with constrained magnetization)
-
-```bash
-python examples/run_mncl2_abinit.py --cutoff 3
-```
-
-### Generic calculator
-
-```bash
-python examples/run_exchange.py structure.cif Cr 3
-```
-
----
-
-## Directory structure during calculation
-
-When `compute_multi_neighbor_exchange` runs, each configuration gets its own subdirectory:
+This creates the following directory structure, where each spin configuration gets its own subdirectory:
 
 ```
 workdir/
